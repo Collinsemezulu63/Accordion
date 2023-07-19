@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: comic sans ms;
+}
+
+.mainCont {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  /* color: white; */
+  height: 100vh;
+  /* background-image: url(IMAGES2/atrium.jpg); */
+}
+
+button.accordion {
+  width: 50%;
+  padding: 15px;
+  text-align: left;
+  cursor: pointer;
+}
+
+button.accordion:nth-of-type(1) {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+button.accordion:nth-of-type(2) {
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+button.accordion:nth-of-type(3) {
+  background-color: yellow;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+button.accordion:nth-of-type(4) {
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+button.accordion:nth-of-type(5) {
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+button.accordion:nth-of-type(6) {
+  background-color: indigo;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+button.accordion:nth-of-type(7) {
+  background-color: violet;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+button.accordion::after {
+  content: "\2795";
+  /* font-weight: bold; */
+  /* color: white; */
+  /* font-size: ; */
+  float: right;
+}
+
+button.accordion.active::after {
+  content: "\2796";
+}
+
+div.panel {
+  max-height: 0;
+  width: 45%;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  border: 2px solid #bbb;
+}
+
+div.panel p {
+  padding: 10px;
+
+  /* margin: 10px; */
+}
+
+div.panel.show {
+  max-height: 500px;
+  padding: 10px 0px 10px;
+  opacity: 1;
+}
